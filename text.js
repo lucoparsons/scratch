@@ -2,22 +2,20 @@
  * Created by h205p2 on 1/10/17.
  */
 
-function Forest() {
-    this.x0y0F = 'imgs/cabinSample.jpg';
-    this.x0y0L = 'imgs/creekSample.jpg';
-    this.x0y0R = 'imgs/pathSample.jpg';
-}
-var forest = new Forest();
-
-/*var backgroundArray = [
-'imgs/cabinSample.jpg',
-'imgs/creekSample.jpg',
-'https://i.ytimg.com/vi/jF7TqzPP38A/hqdefault.jpg'
-];*/
-
-var turn = function() {
-
+var forest = {
+    x0: {
+        y0: {
+            E: 'imgs/creekSample.jpg',
+            S: 'imgs/pathSample.jpg'
+        },
+        y1: {
+            E: 'https://i.ytimg.com/vi/jF7TqzPP38A/hqdefault.jpg',
+            S: 'cabinSample.jpg',
+            W: ''
+        }
+    }
 };
+console.log(forest.x0.y0.E);
 
 var facing = ['N', 'E', 'S', 'W'];
 var a = 0;
