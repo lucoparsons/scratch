@@ -42,3 +42,7 @@ body {
     bottom: 10%;
     z-index: 0;
 }
+#output {
+    z-indez: 2;
+    position: fixed;
+}

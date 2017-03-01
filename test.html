@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+    <script>
+
+        function handler(result) {
+            //console.log(result);
+            for(var i = 0; i<result.items.length;i++) {
+                $("#output").append("<img src=" + result.items[i].link + ">");
+            }
+        }
+
+        function getAPI(startIndex) {
+            $(document).ready(function () {
+                $("#output").empty();
+                $.ajax({
+                    url: "https://www.googleapis.com/customsearch/v1?q=beach-background&start=" + startIndex + "&size=xlarge&key=AIzaSyCu3wCnIuKo0CdHrx9lmAXCvQLBfgEOyOk&cx=003558548276889252640:vmfxgbxjotu&searchType=image",
+                    //url: "https://www.googleapis.com/customsearch/v1?q=forest&imgColorType=gray&start=" + startIndex + "&key=AIzaSyDp7PL56Iz_gkL4iCnLxrNkm4ch_58pSrY&cx=013835952307974573801:85sftrwobqk&searchType=image&imgSize=medium",
+                    type: 'GET',
+                    crossDomain: true,
+                    dataType: 'jsonp',
+                    success: function (result) {
+                        console.log(result);
+                        handler(result);
+                    },
+                    error: function () {
+                        alert('Failed!');
+                    }
+                });
+            });
+        }
+        for(i=1; i<10; i+=10) {
+            getAPI(i);
+        }
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+
+<div id="output"></div>
+
+</body>
+</html>
