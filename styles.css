@@ -1,4 +1,4 @@
-#leftTurn {
+#leftTurn{
     position: fixed;
     left: 20%;
     top: 40%;
@@ -7,7 +7,7 @@
     font-size: 18px;
 }
 
-#rightTurn {
+#rightTurn{
     position: fixed;
     right: 20%;
     top: 40%;
@@ -16,7 +16,7 @@
     font-size: 18px;
 }
 
-#walk {
+#walk{
     position: fixed;
     left: 45%;
     top: 25%;
@@ -25,24 +25,45 @@
     font-size: 18px;
 }
 
-body {
+body{
     background-color: black;
 }
 
-#compass {
+#compass{
     position: fixed;
     right: 10.3%;
     bottom: 10.4%;
     z-index: 1;
 }
 
-#beigeCirc {
+#beigeCirc{
     position: fixed;
     right: 10%;
     bottom: 10%;
     z-index: 0;
 }
-#output {
-    z-indez: 2;
+#output{
+    z-indez: 1;
     position: fixed;
+}
+
+div{
+    text-shadow: 4px 2px #F0F8FF;
+}
+
+#rectangle{
+    position: fixed;
+    width:19px;
+    height: 112px;
+    background: #c90906;
+    left: 97px;
+    bottom: 92px;
+    z-index: 1;
+}
+
+#tempGauge{
+    position: fixed;
+    left: 80px;
+    bottom: 40px;
+    z-index: 0;
 }
