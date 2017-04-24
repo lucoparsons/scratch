@@ -65,5 +65,10 @@ div{
     position: fixed;
     left: 80px;
     bottom: 40px;
-    z-index: 0;
+}
+
+#daImg{
+    position: fixed;
+    left: 50%;
+    top: 50%;
 }

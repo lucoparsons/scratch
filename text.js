@@ -28,7 +28,6 @@ function getAPI(startIndex) {
             dataType: 'jsonp',
             success: function (result) {
                 buildInitialArray(result);
-
             },
             error: function () {
                 alert('Failed!');
@@ -99,15 +98,20 @@ y=4;
 var distance = 0;
 var theSpot = [Math.floor((Math.random()*8)+1), Math.floor((Math.random()*8)+1)];
 console.log(theSpot);
+function reloadage() {
+    location.reload();
+}
 function spotCheck() {
     $(document).ready(function() {
         $('.cntrls').hide();
         $('#backdrop').fadeOut(function () {
+
             $(this).attr('src', 'https://media.giphy.com/media/yr7n0u3qzO9nG/giphy.gif').fadeIn(5000);
         });
         //document.getElementById('tempGauge').src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/CH_cow_2_cropped.jpg/250px-CH_cow_2_cropped.jpg';
         $('#tempGauge').attr('src', 'imgs/brokenGauge.png');
         $('#rectangle').animate({height: "+=450px"}, 'slow');
+        $('body').append("<div onclick='reloadage()' id='daImg'>play again</div>")
     });
 }
 function calcSpot() {
@@ -150,7 +154,7 @@ var turnLeft = function() {
     });
 };
 
-var walk = function() {
+var walk = function()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           {
     startDist = distance;
     boundaryCheck();
         if (direction == 'N') {
@@ -237,19 +241,3 @@ $(document).ready(function() {
         $(this).css({'text-shadow': '4px 2px #F0F8FF'});
     });
 });
-/*var forest = {
-x0: {
-    y0: {
-        E: 'imgs/creekSample.jpg',
-            S: 'imgs/pathSample.jpg'
-    },
-    y1: {
-        E: 'https://i.ytimg.com/vi/jF7TqzPP38A/hqdefault.jpg',
-            S: 'cabinSample.jpg',
-            W: ''
-    }
-}
-};
-console.log(forest.x0.y0.E);*/
-
-    //appending sum imgs: $("#img").append("<img src='" + resultArray2d[x][y].link + "' width='100' height='100'>")
